@@ -53,12 +53,11 @@ export default function ReleaseSchedule() {
       
      
        JSON - V2 Message (Release Snapshot) for UPC : <b>&nbsp;{query}</b>
-       
-       <pre><code>
-
-       {JSON.stringify(data, "", 2)}
-</code></pre>
-       
+      
+       <pre>
+          <code>
+           <b>{JSON.stringify(data, "", 2)}</b>
+          </code></pre>
        </div>
 
       </div>
