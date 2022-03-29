@@ -59,7 +59,7 @@ export default function ReleaseSchedule() {
            <b>{JSON.stringify(data, "", 2)}</b>
           </code></pre>
        </div>
-
+       
       </div>
   );
 }
