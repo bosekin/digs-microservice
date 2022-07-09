@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: digs-microservice-deployment
+  labels:
+    app: digs-microservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: digs-microservice
+  template:
+    metadata:
+      labels:
+        app: digs-microservice
+    spec:
+      imagePullSecrets:
+      - name: docker-hub-private
+      containers:
+      - name: digs-microservice
+        image: kingslysg/digs-microservice
+        ports:
+        - containerPort: 80
