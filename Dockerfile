@@ -6,12 +6,6 @@ WORKDIR /code
 COPY package.json package.json
 COPY package-lock.json package-lock.json
 
-#RUN npm install
-#COPY . .
-
-#CMD ["npm","run","start"]
-
-#For Web - Service
 RUN npm ci --production
 
 COPY . .
@@ -19,6 +13,7 @@ COPY . .
 RUN npm run build
 
 
+#For Web - Service
 FROM nginx:stable-alpine as prod
 
 COPY --from=build /code/build /usr/share/nginx/html
