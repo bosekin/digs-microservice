@@ -1,3 +1,4 @@
+#For Build
 FROM node:14.17.3-buster as build
 
 WORKDIR /code
@@ -10,6 +11,7 @@ COPY package-lock.json package-lock.json
 
 #CMD ["npm","run","start"]
 
+#For Web - Service
 RUN npm ci --production
 
 COPY . .
