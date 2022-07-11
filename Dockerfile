@@ -1,4 +1,4 @@
-#For Build
+#For Build - Image
 FROM node:14.17.3-buster as build
 
 WORKDIR /code
@@ -13,7 +13,7 @@ COPY . .
 RUN npm run build
 
 
-#For Web - Service
+#For Web - Docker Image
 FROM nginx:stable-alpine as prod
 
 COPY --from=build /code/build /usr/share/nginx/html
