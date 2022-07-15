@@ -26,7 +26,7 @@ kind: Service
 metadata:
   name: digs-microservice-ngix
   labels:
-    app: microservice
+    app: digs-microservice
 spec:
   ports:
   - protocol: TCP
@@ -35,4 +35,4 @@ spec:
     nodePort: 31500
   type: NodePort
   selector:
-    app: dmicroservice
+    app: digs-microservice
